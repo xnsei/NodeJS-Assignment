@@ -13,7 +13,7 @@ function App() {
     const [data, setData] = useState(Array<Data>());
 
     useEffect(() => {
-        axios.get("http://localhost:4000/data").then((response) => {
+        axios.get("https://nodejs-assignment-backend.onrender.com/data").then((response) => {
             console.log(response.data);
             setData(response.data);
         }).catch((error) => {
