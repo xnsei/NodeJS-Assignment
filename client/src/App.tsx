@@ -14,7 +14,6 @@ function App() {
 
     useEffect(() => {
         axios.get("https://nodejs-assignment-backend.onrender.com/data").then((response) => {
-            console.log(response.data);
             setData(response.data);
         }).catch((error) => {
             console.log(error)
