@@ -45,9 +45,7 @@ const calculateData = (data: ImageData[]) => {
 
 app.get("/data", (req: Request, res: Response) => {
     const data = require("./data.json");
-    res.json({
-        data: JSON.stringify(calculateData(data))
-    });
+    res.send(calculateData(data));
 });
 
 app.listen(4000, () => {
