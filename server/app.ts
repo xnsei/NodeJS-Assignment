@@ -48,6 +48,10 @@ app.get("/data", (req: Request, res: Response) => {
     res.send(calculateData(data));
 });
 
+app.get("/", (req: Request, res: Response) => {
+    res.json({message: "Hello World!");
+});
+
 app.listen(4000, () => {
     console.log("Server started on http://localhost:4000");
 });
